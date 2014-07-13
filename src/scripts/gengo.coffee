@@ -15,13 +15,9 @@
 # - 日付の判定はなく、境界の年には次の元年を優先。
 #
 # Author:
-#   bouzuya
+#   bouzuya <m@bouzuya.net>
 #
 module.exports = (robot) ->
-  M_START = 1868
-  T_START = 1912
-  S_START = 1926
-  H_START = 1989
 
   robot.respond /gengo(\s+(\d+))?$/i, (res) ->
     currentYear = new Date().getYear() + 1900
@@ -38,5 +34,5 @@ module.exports = (robot) ->
     unless result?
       res.send '知りません'
     else
-      y = year - result.start
-      res.send(result.name + (if y is 0 then '元' else y + 1) + '年')
+      y = year - result.start + 1
+      res.send(result.name + (if y is 1 then '元' else y) + '年')
