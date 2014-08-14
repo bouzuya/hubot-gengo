@@ -30,5 +30,8 @@
     "sinon-chai": "^2.5.0",
     "sinon": "^1.10.3",
     "coffee-script": "^1.7.1"
+  },
+  "peerDependencies": {
+    "coffee-script": "1.7.x"
   }
 }
