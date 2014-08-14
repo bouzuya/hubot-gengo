@@ -1,6 +1,6 @@
 {
   "name": "hubot-gengo",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A Hubot script for responding the japanese era name.",
   "main": "index.js",
   "scripts": {
